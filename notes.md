@@ -68,7 +68,7 @@ caseManager: {
 
 To run the cypress UI: `./node_modules/.bin/cypress open`
 
-You can run the tests live in the browser by adding the `--head` or you can just enter the command 
+You can run the tests live in the browser by adding the `--head` or you can just enter the command
 
 Alternatively, you can run the tests with `yarn cypress run`
 
@@ -99,16 +99,16 @@ Then you can run `yarn cypress open`
 ### Tool for Improving work flow through a project.
 
 1. Create a rubric together that defines a scale or spectrum.
-    1. e.g. Excellent work flow vs. not so good working flow
-    2. Could have three through ten points.
-        1. The number of points is defined during the creation of the tool.
-        2. You come up with examples of what you want to strive towards vs what you want to avoid
-        3. What do these things look like? Feel like? Sound like? etc.
+   1. e.g. Excellent work flow vs. not so good working flow
+   2. Could have three through ten points.
+      1. The number of points is defined during the creation of the tool.
+      2. You come up with examples of what you want to strive towards vs what you want to avoid
+      3. What do these things look like? Feel like? Sound like? etc.
 2. Go through a project, keeping this scale or spectrum in mind.
 3. After the project, use the tool with your partner or group. Everyone fills out a rubric for their self.
-    1. How well did your team do this time? What makes you say that?
-    2. What can be improved next time?
-        1. Make concrete points. Does this change the way the rubric is designed? Do you need to adjust the rubric in order to tune into a different outcome? What’s not working or useless from the rubric?
+   1. How well did your team do this time? What makes you say that?
+   2. What can be improved next time?
+      1. Make concrete points. Does this change the way the rubric is designed? Do you need to adjust the rubric in order to tune into a different outcome? What’s not working or useless from the rubric?
 
 ## Frontend Masters
 
@@ -178,7 +178,7 @@ git push --force-with-lease (necessary after we rebase or modify our git history
 
 git rebase -i HEAD~10
 
-git reset --soft HEAD~1  (used to split our current commit, the soft option keeps the files so we can used them to make more commits)
+git reset --soft HEAD~1 (used to split our current commit, the soft option keeps the files so we can used them to make more commits)
 
 How change from https to ssh:
 
@@ -269,6 +269,16 @@ Search and replace:
 4. Use `.` to replace the occurrence with the same replacement, or go to the next result if you want to keep it.
 
 What’s this `cgn` keystroke, you may ask? What does it mean? If you read `:help gn`, you’ll see that `gn` is the same as `n`, except that it will start Visual mode and select the occurrence. We just do a change (`c`) on the next (selected) searched occurrence. From there, you can imagine that keystrokes like `cgN` or `dgn` will work as well.
+
+## vim-surround
+
+In Normal mode, on an empty line, I type ysst, followed by the name of my tag (e.g. "div"), then Enter.
+
+In Insert mode I type Ctrl+s, then t, then the name of my tag, then Enter.
+
+These are the default vim-surround keybinds, and they're the same for any other "surround", the only difference is instead of typing ")" or "}" you type "t", then the tag name, then Enter.
+
+Btw when you're typing the tag name, you can add other stuff and it'll work as expected. For example, you can add html attributes and they won't be added to the closing tag. Or you can put a slash "/" at the end, and it'll correctly interpret that as a self-closing tag.
 
 `csw"`- vim-surround, surround current word with quotes
 

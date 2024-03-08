@@ -56,3 +56,27 @@ normal mode I toggles gitignore
 `fg` resume vim with same windows
 
 `zz` center vim at your cursor
+
+`vap` visual cmd around paragraph
+
+`vi{` delete within squirrely
+
+`gv` previous highlight
+
+
+---
+
+### vim macros
+
+1. `qw` start recording at register of w
+2. add something / perform action
+3. go to next line
+4. press escape
+5. `number@w` pastes what is recorded in register of w four times/lines
+
+---
+
+### multi line insert
+
+You can also use ctrl + v to highlight the first character of each line and then do shift + i.
+

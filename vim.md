@@ -80,3 +80,21 @@ normal mode I toggles gitignore
 
 You can also use ctrl + v to highlight the first character of each line and then do shift + i.
 
+---
+
+### search and replace
+
+```
+:vimgrep /word/ `find . -type f`
+```
+
+Use vimgrep to find the word. find in this directory of type file and add to quick fix list
+
+- `:copen` - open quick fix list
+
+
+Go through every instance and check whether to change it - g = global, c = interactive check
+```
+:cdo %s/word/words/gc
+```
+

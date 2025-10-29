@@ -63,6 +63,9 @@ normal mode I toggles gitignore
 
 `gv` previous highlight
 
+`yitvatp` copy everything in tag, select everything with tag and paste over it.
+
+
 
 ---
 
@@ -96,5 +99,15 @@ Use vimgrep to find the word. find in this directory of type file and add to qui
 Go through every instance and check whether to change it - g = global, c = interactive check
 ```
 :cdo %s/word/words/gc
+:cdo %s/theme-fluege-de/theme/gc
 ```
 
+How to ignore folders: 
+```
+:vimgrep /fd-flight-offer-leg-group-flat/ `find . -type f -not -path "./node_modules/*"`
+:vimgrep /bloetry/ `find . -type f \( ! -path "./node_modules/*" -and ! -path "./.next/*" \)`
+
+```
+:vimgrep /-flat/ `find . -type f \( ! -path "./node_modules/*" -and ! -path "./.git/*" -and ! -name "yarn.lock" \)`
+
+:vimgrep /theme-fluege-de/ `find . -type f \( ! -path "./node_modules/*" -and ! -path "./server/node_modules/*" -and ! -path "./.git/*" -and ! -name "yarn.lock" -and ! -name "CHANGELOG.md" \)`
